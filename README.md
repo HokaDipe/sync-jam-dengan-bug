@@ -18,18 +18,18 @@
   
 4. masukan di ``rc.local`` atau ``luci -> system - startup - local``
    ```
-   sh /sbin/jam google.com
+   sh /sbin/jam m.tv360.vn
    ```
 5. jika ingin melakukan restart tunnel dengan ``jam.sh`` dan sebelum nya ada pengecekan dulu koneksi dari ``modem`` ke ``bug`` yg dituju di crontabs ketikan di ``luci->system->schedule task``
    ```
-   * */6 * * * sh /sbin/ping.sh google.com
+   0 * * * * sh /sbin/ping.sh m.tv360.vn
    ```
    ini artinya setiap 6 jam sekali ``ping.sh`` dijalanin untuk mengecek koneksi internet jika tidak ada replya maka ``jam.sh`` dijalankan restart tunnel
-6. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443`` atau bug ip ``curl -i bug_ip:443``
+7. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443`` atau bug ip ``curl -i bug_ip:443``
    ex : ``curl -i time.google.com`` lihat jika ada respon date maka domain tersebut bisa dipakai
    ![image](https://user-images.githubusercontent.com/92195275/207335985-73199713-f1fd-4758-9ac5-d66a42966926.png)
    
-7. Untuk pengguna ``Openclash`` ada pengaturan khusus ``config`` ``terminal``
+8. Untuk pengguna ``Openclash`` ada pengaturan khusus ``config`` ``terminal``
    di config terminal di device nya pilih utun
    NB: TERMINAL OPENWRT TIDAK AKAN BISA DIGUNAKAN, JADI GUNAKAN PUTTY atau JUICESSH
 
