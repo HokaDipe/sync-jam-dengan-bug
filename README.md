@@ -22,7 +22,7 @@
    ```
 5. jika ingin melakukan restart tunnel dengan ``jam.sh`` dan sebelum nya ada pengecekan dulu koneksi dari ``modem`` ke ``bug`` yg dituju di crontabs ketikan di ``luci->system->schedule task``
    ```
-   0 * * * * sh /sbin/ping.sh m.tv360.vn
+   0 */6 * * * sh /sbin/ping.sh m.tv360.vn
    ```
    ini artinya setiap 6 jam sekali ``ping.sh`` dijalanin untuk mengecek koneksi internet jika tidak ada replya maka ``jam.sh`` dijalankan restart tunnel
 7. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443`` atau bug ip ``curl -i bug_ip:443``
